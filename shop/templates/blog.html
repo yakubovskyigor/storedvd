@@ -1,0 +1,78 @@
+{% extends 'main.html' %}
+{% block title %}<title>Блог про птиц</title>{% endblock %}
+{% block keywords %}<meta name="keywords" content="птицы, блог птицы" />{% endblock %}
+{% block content %}
+<!-- blog -->
+	<div class="blog">
+		<!-- container -->
+		<div class="container">
+			<div class="col-md-9 blog-grids">
+				<div class="blog-left single-left">
+					<a href="single.html">Статья 3</a>
+					{% load my_filters %}
+					<p class="likes">Размещено <span>{{ single.date|converter_date }}</span> (автор Иван Иванов) / 2 комментария</p>
+                    {% load static %}
+					<a href="single.html" class="b-img"><img src="{% static 'images/b3.jpg' %}" alt="" /></a>
+					<p>Кстати, многие известные личности являются только методом политического участия и рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок. Мы вынуждены отталкиваться от того, что сплочённость команды профессионалов предоставляет широкие возможности для системы массового участия.</p>
+					<a href="single.html" class="more">Читать далее...</a>
+				</div>
+				<div class="blog-left single-left">
+					<a href="single.html">Статья 2</a>
+					<p class="likes">Размещено <span>{{ single.date|converter_date }}</span> (автор Иван Иванов) / 2 комментария</p>
+					<a href="single.html" class="b-img"><img src="{% static 'images/b1.jpg' %}" alt="" /></a>
+					<p>Сплочённость команды профессионалов предоставляет широкие возможности для новых предложений. Имеется спорная точка зрения, гласящая примерно следующее: базовые сценарии поведения пользователей лишь добавляют фракционных разногласий и разоблачены.</p>
+					<a href="single.html" class="more">Читать далее...</a>
+				</div>
+				<div class="blog-left single-left">
+					<a href="single.html">Статья 1</a>
+					<p class="likes">Размещено <span>{{ single.date|converter_date }}</span> (автор Иван Иванов) / 2 комментария</p>
+					<a href="single.html" class="b-img"><img src="{% static 'images/b2.jpg' %}" alt="" /></a>
+					<p>Банальные, но неопровержимые выводы, а также активно развивающиеся страны третьего мира, превозмогая сложившуюся непростую экономическую ситуацию, ограничены исключительно образом мышления. Современные технологии достигли такого уровня, что современная методология разработки говорит о возможностях первоочередных требований.</p>
+					<a href="single.html" class="more">Читать далее...</a>
+				</div>
+			</div>
+			<div class="col-md-3 sidebar">
+				<h5>Поиск по блогу</h5>
+				<div class="search">
+				  <form>
+					<input type="text" value="Введите строку поиска..." onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
+					<input type="submit" value="">
+				  </form>
+				</div>
+				<div class="sidebar-bottom">
+					<h5>Архив</h5>
+					<ul>
+						<li><a href="#">Февраль 2025</a></li>
+						<li><a href="#">Январь 2025</a></li>
+						<li><a href="#">Декабрь 2025</a></li>
+						<li><a href="#">Ноябрь 2025</a></li>
+						<li><a href="#">Октябрь 2025</a></li>
+						<li><a href="#">Сентябрь 2025</a></li>
+					</ul>
+				</div>
+				<div class="sidebar-last">
+					<h5>Галерея</h5>
+					<ul>
+						<li><a href="images/p1.jpg"><img src="{% static 'images/p1.jpg' %}" alt="" ></a></li>
+						<li><a href="images/p2.jpg"><img src="{% static 'images/p2.jpg' %}" alt="" ></a></li>
+						<li><a href="images/p3.jpg"><img src="{% static 'images/p3.jpg' %}" alt="" ></a></li>
+					</ul>
+					<ul>
+						<li><a href="images/p2.jpg"><img src="{% static 'images/p2.jpg' %}" alt="" ></a></li>
+						<li><a href="images/p3.jpg"><img src="{% static 'images/p3.jpg' %}" alt="" ></a></li>
+						<li><a href="images/p1.jpg"><img src="{% static 'images/p1.jpg' %}" alt="" ></a></li>
+					</ul>
+					<ul>
+						<li><a href="images/p3.jpg"><img src="{% static 'images/p3.jpg' %}" alt="" ></a></li>
+						<li><a href="images/p1.jpg"><img src="{% static 'images/p1.jpg' %}" alt="" ></a></li>
+						<li><a href="images/p2.jpg"><img src="{% static 'images/p2.jpg' %}" alt="" ></a></li>
+					</ul>
+					</ul>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //blog -->
+{% endblock %}
